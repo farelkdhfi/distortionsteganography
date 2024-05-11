@@ -1,0 +1,207 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.container {
+  position: relative;
+  margin: auto auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 75pxpx;
+  width: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 60px; /* Ukuran font */
+  animation: neon-glow 1.3s infinite alternate; /* Animasi glow */
+  margin-bottom: 35px;
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 13px; /* Ukuran font */
+  margin-bottom: 35px;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 2px #ffffff;
+    text-shadow: 0 0 4px #ffffff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 7px #fff;
+  }
+}
+
+input[type="file"] {
+  display: block;
+  width: 283px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resultContainer {
+  margin-top: 20px;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-position 0.2s ease;
+  background-size: 200% auto;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  width: 50%;
+  text-decoration: none;
+  transition: 0.5s;
+  text-shadow: 0 0 3px #ffffff;
+  animation: ko 1.3s infinite alternate;
+}
+.btn:hover {
+  background: #e6cdff;
+  color: #7c00f0;
+  box-shadow: 0 0 5px #ba75ff, 0 0 25px #8b17ff, 0 0 50px #590090, 0 0 200px #8403f4;
+}
+
+@keyframes ko {
+  0% {
+    filter: drop-shadow(0 0 1px #8c00ff) drop-shadow(0 0 2px #a047ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #8c00ff) drop-shadow(0 0 7px #a047ff);
+  }
+}
+
+textarea {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  width: 280px; /* Lebar textarea */
+  height: 30px; /* Tinggi textarea */
+  resize: none;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.blinking-text {
+  font-size: 36px;
+  color: #ffffff;
+  animation: blink 01s infinite alternate;
+  text-shadow: 0 0 10px #fff;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 100;
+    color: #ffffff; /* Warna pertama */
+  }
+  100% {
+    opacity: 100;
+    color: #101010; /* Warna kedua */
+    text-shadow: none;
+  }
+}
+
+.upload-box {
+  color: #dadada;
+  font-size: 10px;
+  background: #000000;
+  border: none;
+  border-radius: 20px;
+  width: 283px;
+  outline: none;
+  cursor: pointer;
+  animation: yui 1.3s infinite alternate;
+}
+
+@keyframes yui {
+  0% {
+    filter: drop-shadow(0 0 2px #8c00ff) drop-shadow(0 0 4px #a047ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #8c00ff) drop-shadow(0 0 7px #a047ff) drop-shadow(0 0 13px #a047ff);
+  }
+}
+
+::-webkit-file-upload-button {
+  color: #000000;
+  background: #7600b0;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  font-weight: bold;
+}
+
+::-webkit-file-upload-button:hover {
+  background: #31003e;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+  z-index: -10;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #e4e4e4;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #ffffff44, 0 0 50px #ffffff, 0 0 100px #a4a4a4;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #000000;
+  box-shadow: 0 0 0 10px #9900ff44, 0 0 50px #6500f3, 0 0 100px #7300ff;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.logo {
+  width: 200px; /* Sesuaikan ukuran gambar */
+  height: 200px; /* Sesuaikan ukuran gambar */
+  background-image: url("C:\steganografi - Copy\img\loremmp.png"); /* Ganti dengan path gambar Anda */
+  animation: glowing 1.3s infinite alternate; /* Animasi efek glowing */
+}
+
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 2px #ffffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 9px #ffffff);
+  }
+}
